@@ -1,4 +1,4 @@
-var express = require('express');
+import express from 'express';
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -15,7 +15,7 @@ var MongoStore = require('connect-mongo')(session);
 var routes = require('./routes/index');
 var userRoutes = require('./routes/user');
 
-var app = express();
+const app = express();
 
 mongoose.connect('mongodb://hassan:0105050kjn@ds151382.mlab.com:51382/shopping');
 require('./config/passport');
